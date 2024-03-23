@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-wh3224ij205)$tq-%o^hse!pui2ck_^u)hsqd0dg00t^n2=qmr
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-# CSRF_TRUSTED_ORIGINS = ['https://workforce-productivity-and-scheduling.onrender.com','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://e-shoping-tkrl.onrender.com','https://*.127.0.0.1']
 
 
 # Application definition
