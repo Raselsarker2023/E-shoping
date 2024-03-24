@@ -62,6 +62,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'E_shoping.urls'
+CORS_ORIGIN_ALLOW_ALL = True
+CSRF_TRUSTED_ORIGINS = ['https://e-shoping-tkrl.onrender.com']
+
 
 TEMPLATES = [
     {
