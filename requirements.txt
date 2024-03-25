@@ -13,6 +13,7 @@ contourpy
 crispy-bootstrap5
 cryptography
 cycler
+django-cors-headers
 defusedxml
 distlib
 dj-database-url
