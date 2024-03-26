@@ -16,7 +16,7 @@ class Cart(models.Model):
         
 
     def __str__(self):
-        return f"Cart for {self.user}"
+        return f"Cart for {self.user_name}"
 
 
 class CartItem(models.Model):
@@ -42,4 +42,4 @@ class Wishlist(models.Model):
         
         
     def __str__(self):
-        return self.wished_item.product
+        return str(self.wished_item) 

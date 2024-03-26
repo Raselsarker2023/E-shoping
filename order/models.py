@@ -23,7 +23,7 @@ class Order(models.Model):
 
 
     def __str__(self):
-        return str(self.name) if self.name is not None else 'Unnamed Product'
+        return str(self.first_name) if self.last_name is not None else 'Unnamed Product'
     
     
     
