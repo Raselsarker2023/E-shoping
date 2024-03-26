@@ -22,7 +22,7 @@ class ProductModel(models.Model):
 
 
 class Review(models.Model):
-    reviewer = models.ForeignKey(ProductModel, on_delete=models.CASCADE, related_name='reviews_received')
+    product_name = models.ForeignKey(ProductModel, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=30, null=True, blank=True)
     email = models.EmailField()
     body = models.TextField(blank=True, null=True)

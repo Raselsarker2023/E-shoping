@@ -5,10 +5,8 @@ from products.models import ProductModel
 
 # Create your models here.
 
-
 class Cart(models.Model):
     user_name = models.ForeignKey(User, on_delete=models.CASCADE)
-    total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     
     class Meta:
@@ -29,11 +27,9 @@ class CartItem(models.Model):
 
     
     
-    
-    
 class Wishlist(models.Model):
     user_name = models.ForeignKey(User,on_delete=models.CASCADE)
-    wished_item = models.ForeignKey(OrderList,on_delete=models.CASCADE, null=True, blank=True)
+    wished_items = models.ForeignKey(CartItem, on_delete=models.CASCADE, blank=True, null=True)
     added_date = models.DateTimeField(auto_now_add=True)
 
 
@@ -42,4 +38,4 @@ class Wishlist(models.Model):
         
         
     def __str__(self):
-        return str(self.wished_item) 
+        return str(self.wished_items) 
