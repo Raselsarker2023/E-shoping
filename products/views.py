@@ -2,16 +2,10 @@ from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from . import models, serializers
-from rest_framework import filters, pagination
+from rest_framework import filters
 from django.http import Http404
-from rest_framework.pagination import PageNumberPagination
 
 
-
-class ProductPagination(pagination.PageNumberPagination):
-    page_size = 1 # items per page
-    page_size_query_param = page_size
-    max_page_size = 100
     
     
 class ProductModelAPIView(viewsets.ModelViewSet):
@@ -19,7 +13,6 @@ class ProductModelAPIView(viewsets.ModelViewSet):
     serializer_class = serializers.ProductModelSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['name', 'category__name', 'description', 'rating']
-    pagination_class = ProductPagination
 
 
 
