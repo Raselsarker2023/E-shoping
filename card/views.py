@@ -2,7 +2,10 @@ from rest_framework import viewsets
 from . import models, serializers
 from rest_framework.filters import SearchFilter
 from rest_framework import viewsets
-
+    
+from django.shortcuts import render
+from .models import CartItem
+from .serializers import CartItemSerializer
 
 # Create your views here.
 
@@ -25,7 +28,6 @@ class CartItemViewset(viewsets.ModelViewSet):
         if self.request.method == "POST":
             return serializers.CartItemSerializer
         return serializers.CartItemSerializer
-    
 
     
     
